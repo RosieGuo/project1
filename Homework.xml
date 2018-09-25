@@ -1,0 +1,65 @@
+<Geometrics>
+	<solid-figure>
+		<Cylinder>
+			<cicular-cylinder>
+
+			<Prism>
+				<right-prism>
+				<slant-prism>
+				<triangular-prism>
+				<quadrangular-prism>
+			</Prism>
+		</Cylinder>
+
+		<Cone>
+			<cicular-cone>
+
+			<Pyramid>
+				<triangular-cone>
+				<quadrangular-cone>
+			</Pyramid>
+		</Cone>
+
+		<solid-of-revolution>
+			<frustum-of-a-cone>
+			<solid-sphere>
+			<spherical-crown>
+			<ring>
+			<annular-sector>
+		</solid-of-revolution>
+
+		<cross-section>
+			<prismatic-table>
+			<truncated-circular-cylinder>
+			<truncated-prism>
+			<spherical-cap>
+		</cross-section>
+	</solid-figure>
+
+	<plane-figure>
+		<Circle>
+			<Round>
+			<Ellipse>
+			<Oval>
+		</Circle>
+
+		<Polygon>
+			<Triangle>
+			<Quadrilateral>
+			<Pentagon>
+		</Polygon>
+
+		<Arch>
+			<great-arc>
+			<minor-arc>
+			<parabolic-arc>
+		</Arch>
+
+		<multi-arc>
+			<crescent-shape>
+			<grain-shape>
+			<tai-chi-shape>
+			<gourd-shape>
+		</multi-arc>
+	</plane-figure>
+</Geometrics>
