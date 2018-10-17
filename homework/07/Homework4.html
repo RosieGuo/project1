@@ -1,0 +1,90 @@
+<!Doctype html>
+<html>
+<head>
+<title></title>
+<style>
+html,body{
+	margin:0px;
+	height:100%;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+@keyframes twirl{
+	50%{
+		transform: rotate(270deg);
+	}
+	100%{
+		transform: initial;
+	}
+}
+@keyframes stomp{
+	50%{transform: translate(0,300px);}
+	100%{transform: initial;}
+}
+#purple{
+	animation: twirl 2s infinite;
+	background-color: rgb(105, 128, 209);
+	width:20vmin;
+	height:70vmin;
+}
+#pink{
+	animation: twirl 2s infinite;
+	background-color: rgb(201, 144, 161);
+	width:20vmin;
+	height:70vmin;
+}
+#darkblue{
+	animation: twirl 2s infinite;
+	background-color: rgb(39, 93, 184);
+	width:20vmin;
+	height:70vmin;
+}
+#red{
+	animation: twirl 2s infinite;
+	background-color: rgb(162, 72, 138);
+	width:20vmin;
+	height:70vmin;
+}
+#outer{
+	animation: stomp 3s infinite;
+}
+
+#inter{
+	animation: stomp 3s infinite;
+}
+#orange{
+	animation: twirl 2s infinite;
+	background-color: rgb(255, 115, 45);
+	width:20vmin;
+	height:70vmin;
+}
+#lightblue{
+	animation: twirl 2s infinite;
+	background-color: rgb(51, 164, 248);
+	width:20vmin;
+	height:70vmin;
+}
+#ower{
+	animation: stomp 3s infinite;
+}
+</style>
+</head>
+<body>
+	<div id="pink"></div>
+	<div id="outer">
+		<div id="purple"></div>
+	</div>
+	<div id="darkblue"></div>
+	<div id="inter">
+		<div id="red"></div>
+	</div>
+	<div id="orange"></div>
+	<div id="ower">
+		<div id="lightblue"></div>
+	</div>
+
+</body>
+</html>
