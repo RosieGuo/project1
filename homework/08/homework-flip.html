@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>html,body{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:100%;
+
+}
+h1{
+	font-size: 10vmin;
+}
+#instruments{
+	margin-left:15px;
+	margin-right:15px;
+	color:rgba(255, 99, 71, 0.5);
+}
+</style>
+</head>
+
+<body>
+	<h1 id="I will learn">I will learn</h1>
+	<h1 id="instruments"></h1>
+	<h1 id="this year">this year.</h1>
+	
+<script>
+
+
+var choices = [
+" accordian",
+	" air horn",
+	"baby grand piano",
+	"bagpipe",
+	"banjo",
+	"bass guitar",
+	"bassoon",
+	"bugle",
+	"calliope",
+	"cello",
+	"clarinet",
+	"clavichord",
+	"concertina",
+	"didgeridoo",
+	"dobro",
+	"dulcimer",
+	"fiddle",
+	"fife",
+	"flugelhorn",
+	"flute",
+	"French horn",
+	"glockenspiel",
+	"grand piano",
+	"guitar",
+	"harmonica",
+	"harp",
+	"harpsichord",
+	"hurdy-gurdy",
+	"kazoo",
+	"kick drum",
+	"lute",
+	"lyre",
+	"mandolin",
+	"marimba",
+	"mellotran",
+	"melodica",
+	"oboe",
+	"pan flute",
+	"piano",
+	"piccolo",
+	"pipe organ",
+	"saxaphone",
+	"sitar",
+	"sousaphone",
+	"tambourine",
+	"theremin",
+	"trombone",
+	"tuba",
+	"ukulele",
+	"viola",
+	"violin",
+	"vuvuzela",
+	"washtub bass",
+	"xylophone",
+	"zither"]
+
+
+var number = Math.random() * 55;
+var integer = parseInt(number);
+
+document.getElementById("instruments").innerHTML = choices[integer];
+
+</script>
+</body>
+</html>
