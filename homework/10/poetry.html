@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+h1{
+	position: absolute;
+	font-size: 10px;
+	padding: 50px;
+	top:50%;
+	left:50%;
+	height:70vmin;
+	width:20vmin;
+	margin-top: -35vmin;
+	margin-left:-35vmin;	
+}
+
+
+</style>
+</head>
+<body>
+<input type="file" id="lyrics">
+<h1 id="song"></h1>
+
+<script>
+
+// load a file
+var reader = new FileReader();
+
+document.getElementById("lyrics").onchange = function(){
+	reader.readAsText(this.files[0]);
+}
+
+reader.onload = function(event){	
+	buildLauvsongs(event.target.result);
+	lauv();
+}
+
+// now the file has been loaded
+
+var poetry = {};
+
+function buildLauvsongs(text){
+	//console.log(text);
+	var words = text.split(/\s+/);
+	//console.log(words);
+	// loop over every word, put it in the poetry
+	var i = 0;
+	while(i < words.length - 1){ 
+		// get the word from the word array
+		var thisword = words[i];
+		var nextword = words[i+1];
+		// if we're seeing this letter for the first time, create an empty array
+		if(poetry[thisword] == undefined){
+			poetry[thisword] = [];
+		}
+		// add the word into the poetry, at the first letter's spot, add to the array
+		poetry[thisword].push(nextword);
+
+		i = i + 1;
+		// i = i + 1 must be typed in the loop
+
+	}
+	//console.log(poetry);
+}
+
+function randomInt(max){
+	return parseInt(Math.random() * max);
+}
+
+
+function lauv(){
+	var keys = Object.keys(poetry);
+	var firstword = keys[ randomInt(keys.length) ];
+
+	var words = [ firstword ];
+
+	//loop start
+	var counter = 0;
+	while(counter < 80){
+		var thisword = words[words.length - 1];
+		var nextwordarray = poetry[thisword];
+		var nextword = nextwordarray[ randomInt(nextwordarray.length) ];
+		words.push(nextword);
+		counter = counter + 1;
+	}
+	console.log(words)
+	//loop end
+
+	var song = words.join(" ");
+	document.getElementById("song").innerHTML = song;
+}
+
+</script>	
+
+</body>
+</html>
